@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <!-- Golang Vanity URLs -->
+  {% for project, url in config.extra.golang_urls.items() %}
+  <meta name="go-import" content="{{ config.site_url }}{{ project }} git {{ url}}">
+  {% endfor %}
+{% endblock %}

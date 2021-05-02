@@ -1,0 +1,55 @@
+site_name: raw.tools
+site_author: Axel Haustant
+site_url: https://raw.tools
+
+# Repository
+repo_name: rawtools/raw.tools
+repo_url: https://github.com/rawtools/raw.tools
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: images/logo-vector-textless.svg
+  favicon: images/logo-textless.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    
+  features:
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+
+markdown_extensions:
+  - admonition
+  - meta
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search
+
+extra:
+  golang_urls:
+    over: https://github.com/rawtools/over
+    wnr: https://github.com/rawtools/wnr
+    gookie: https://github.com/rawtools/gookie
