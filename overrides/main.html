@@ -3,7 +3,7 @@
 {% block extrahead %}
   {{ super() }}
   <!-- Golang Vanity URLs -->
-  {% for project, url in config.extra.golang_urls.items() %}
-  <meta name="go-import" content="{{ config.site_url }}{{ project }} git {{ url}}">
+  {% for project, url in config.extra.golang.vanity.urls.items() %}
+  <meta name="go-import" content="{{ config.extra.golang.vanity.prefix }}/{{ project }} git {{ url }}">
   {% endfor %}
 {% endblock %}

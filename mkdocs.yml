@@ -49,7 +49,10 @@ plugins:
   - search
 
 extra:
-  golang_urls:
-    over: https://github.com/rawtools/over
-    wnr: https://github.com/rawtools/wnr
-    gookie: https://github.com/rawtools/gookie
+  golang:
+    vanity:
+      prefix: raw.tools
+      urls:
+        over: https://github.com/rawtools/over
+        wnr: https://github.com/rawtools/wnr
+        gookie: https://github.com/rawtools/gookie
